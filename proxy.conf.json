@@ -1,0 +1,29 @@
+{
+
+  "/product/forgotpass": {
+    "target": "http://localhost:8080", 
+    "secure": false 
+   },
+    "/product/hero": {
+      "target": "http://localhost:8080", 
+      "secure": false 
+    },
+    "/product/questioncompleted": {
+      "target": "http://localhost:8080", 
+      "secure": false 
+    },
+    "/product/getAllQuestions": {
+      "target": "http://localhost:8080", 
+      "secure": false 
+    },
+    "/product/delete": {
+      "target": "http://localhost:8080", 
+      "secure": false 
+    },
+    "/product/*": {
+      "target": "http://localhost:8080", 
+      "secure": false
+    }
+
+}
+  

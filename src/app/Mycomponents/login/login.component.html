@@ -1,0 +1,36 @@
+<div class="divs" [ngStyle]="{'flex-direction':media==true?'column':'row'}">
+  <video autoplay loop>
+    <source src="../../../assets/loginvideo.mp4" type="video/mp4" />
+</video>
+
+<mat-card class="my-card" [ngStyle]="" style="">
+    
+    <mat-card-content [ngStyle]="{margin:'auto'}">
+      <div class="container">
+        <h1>Login</h1>
+     </div>
+        <form class="my-form" [ngStyle]="{'max-width':media?'70px':'500px'}" > 
+               <mat-form-field class="full-width">
+                  <mat-label>Email</mat-label>
+                  <input  matInput #username  placeholder="Email" name="username"  [(ngModel)]="user.username" value=""  required>
+               </mat-form-field>
+               <mat-form-field class="full-width">
+                  <mat-label>Password</mat-label>
+                  <input  matInput #password  placeholder="Password" value=""   [(ngModel)]="user.password" name="password" required>
+                  </mat-form-field>
+                <a routerLink="../forgot-password" style="color:white;margin: auto;">Forgot Password</a>
+        </form>
+      </mat-card-content>
+      <mat-card-actions [ngStyle]="{margin:'auto','margin-top':media?'-20px':''}">
+        <!-- REGISTER BUTTON --><button (click)="submitForm()" mat-raised-button color="primary">LOGIN</button>
+      </mat-card-actions>
+      </mat-card>
+      <mat-card class="my-card2" style="background-color: transparent;">
+        <!-- <h2 style="color: white;">Login to See Content 🥰 </h2> -->
+        <div class="second"></div>
+      </mat-card>
+     
+      </div>
+      <div *ngFor="let message of messages" class="flash-message" [ngClass]="v==1 ? 'redback':'greenback'">
+        {{ message }}
+      </div>

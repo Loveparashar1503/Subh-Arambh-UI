@@ -1,0 +1,67 @@
+<div class="main-div">
+<!-- <div class="chart-container">
+    <div *ngIf="scorechecker()">You have 0 score, please do atleast one question to see Chart for yourself!</div>
+    <canvas  id="MyChart" style="height: 200px;width: 200px;">{{ chart }}</canvas>
+</div> -->
+<mat-card class="firstdiv">
+    <div *ngIf="scorechecker()">You have 0 score, please do atleast one question to see Chart for yourself!</div>
+    <span>You will get badge only when you will complete all Questions, mark all questions as done</span>
+    <div class="chart-container">
+        <!-- <div *ngIf="scorechecker()">You have 0 score, please do atleast one question to see Chart for yourself!</div> -->
+        <canvas  id="MyChart" style="height: 200px;width: 200px;">{{ chart }}</canvas>
+    </div>
+    <div class="container">
+
+      <ng-container *ngIf="score>10;else second">
+        <p>Hi,Congratulations you have solved all Questions 😍,click below to see your badge</p>
+        <a routerLink="../badgespage">Badge</a>
+        <p>Please Watch the Important OOPS notes now 😎</p>
+        
+      </ng-container>
+<ng-template #second class="second-c">
+  <div *ngIf="rank!=0 && score!=0 && rank<=10">
+    <p>Hi, Congratulations your rank is {{rank}}</p>
+    <span>You are Among Top 10 Scoring people</span>
+    </div>
+    <div *ngIf="score==0 || rank==0">
+       <p>Keep working Hard!!! increase your Score</p>
+       <span>Keep marking Questions as done when done.</span>
+   </div>
+  
+</ng-template>
+</div>
+</mat-card>
+<!-- <div class="middle" *ngIf="checkCondition()">
+
+</div> -->
+<mat-card class="example-card" *ngIf="checkCondition()">
+    <mat-card-header>
+      <div style="text-align: center;margin: auto;border-bottom: 1px solid black;"><p style="text-align: center;font-weight: bolder;letter-spacing: 3px;">TOP 10 ACHIEVERS</p></div>
+      <!-- <mat-card-title class="matcard" ><p style="text-align: center;">TOP 10 ACHIEVERS</p></mat-card-title> -->
+      
+    </mat-card-header>
+    <img mat-card-image src="../../../assets/badge.png" alt="Photo of google" width="150px" height="100px" [ngStyle]="{margin:'auto'}">
+    <mat-card-content>
+        <table style="margin: auto;">
+            <thead>
+              <tr style="display: flex;flex-direction: row;width: 300px;">
+                <th style="width: 100px;">Rank</th>
+                <th style="width: 100px;" >Name</th>
+                <th style="width: 100px;">Score</th>
+              </tr>
+            </thead>
+            <tbody style="margin: auto;">
+              <tr [ngStyle]="{'background-color':(item.name=='You'?'lightgrey':'white')}" style="display: flex;flex-direction: row;width: 300px;" *ngFor="let item of profilearr; let i = index">
+                <td style="width: 100px;">{{ i + 1 }}</td>
+                <td style="width: 100px;" [ngStyle]="{'color':(item.name=='You'?'red':'black')}">{{item.name}}</td>
+                <td style="width: 100px;">{{ item.score }}</td>
+              </tr>
+            </tbody>
+          </table>
+    </mat-card-content>
+    <!-- <mat-card-actions>
+      <a mat-button href="https://www.google.com/about/careers/applications/">Career Page</a>
+      <a mat-button>SHARE</a>
+    </mat-card-actions> -->
+  </mat-card>
+</div>

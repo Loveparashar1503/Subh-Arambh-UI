@@ -1,0 +1,11 @@
+.dialog-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center the items */
+  }
+.mat-form-field{
+    width: 90%; /* Set the width to 80% */
+    margin: 10px 0; /* Optional: add some vertical margin */
+  }
+
+  

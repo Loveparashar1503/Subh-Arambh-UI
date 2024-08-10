@@ -1,0 +1,290 @@
+mat-icon{
+    color:grey;
+}
+.card{
+    height: 100%;
+    width: 0.5vw;
+}
+.cardscontainer{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: auto;
+}
+.card-body{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: auto;
+    height: 100%;
+    background-color: #8f9ead;
+    color: white;
+    /* background: rgb(0,30,36); */
+/* background: linear-gradient(90deg, rgba(0,30,36,0.12881649241727944) 0%, rgba(9,121,79,0.6694327389158788) 53%, rgba(0,212,255,1) 100%); */
+    width: 100%;
+}
+
+.banner{
+    width: 600px;
+    height: 100px;
+    position: relative;
+    box-shadow: 16px 14px 14px #0000008c;
+    background: #181818;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    margin: auto;
+    margin-bottom: 50px;
+}
+
+.banner::before{
+    content: "";
+    background-image: conic-gradient(
+      #ff0052 20deg,
+      transparent 120deg
+    );
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    animation: rotate 2s linear infinite;
+  }
+  
+  .banner::after{
+    content: "Liked Questions";
+    width: 590px;
+    height:90px;
+    background:#181818;
+    position: absolute;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    color: #ff0052;
+    font-size: larger;
+    letter-spacing: 5px;
+    box-shadow: inset 30px 20px 20px #0000008c;
+  }
+  .banner2{
+    width: 600px;
+    height: 100px;
+    position: relative;
+    box-shadow: 16px 14px 14px #0000008c;
+    background: #181818;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    margin: auto;
+    margin-bottom: 50px;
+}
+
+.banner2::before{
+    content: "";
+    background-image: conic-gradient(
+      #ff0052 20deg,
+      transparent 120deg
+    );
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    animation: rotate 2s linear infinite;
+  }
+  
+  .banner2::after{
+    content: "Nothing Liked! 🥹";
+    width: 590px;
+    height:90px;
+    background:#181818;
+    position: absolute;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    color: #ff0052;
+    font-size: larger;
+    letter-spacing: 5px;
+    box-shadow: inset 30px 20px 20px #0000008c;
+  }
+
+  @keyframes rotate {
+    0%{
+        transform: rotate(0deg);
+    }100%{
+        transform: rotate(-360deg);
+    }
+  }
+  .card{
+    overflow: hidden;
+  }
+.card:hover{
+   /* box-shadow: 0px 0px 1px 1px grey; */
+   
+   position: relative;
+}
+
+.card-body > div{
+     width: 33%;
+     height: 100%;
+     position: relative;
+}
+.iconscontainer{
+    position: relative;
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.iconscontainer > div{
+    position: relative;
+    width: 30%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.example-spacer {
+    flex: 1 1 auto;
+  }
+  .my-form{
+    min-width: 150px;
+    max-width: 200px;
+    width: 50%;
+  }
+  .full-width {
+    width: 35%;
+  }
+.cardscontainer{
+    /* width: 100%; */
+}
+
+.normaldiv{
+    width: 30%;
+}
+.div1{
+    display: flex;
+    flex-direction: row;
+
+}
+.icons{
+    display: flex;
+    flex-direction: column;
+    
+}
+.icons > div{
+    /* margin-bottom: 0px; */
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+.header{
+    display: inline-block;
+    width: 100%;
+    height: auto;
+  }
+  .playerOne{
+      display: inline-block;
+      margin-left: 0;
+   }
+  
+  .playerTwo{
+    display: inline-block;
+    margin-right: 0;
+}
+.icon {
+    font-size: 50px;
+}
+.dialogbox{
+    margin-left: 100px;
+    margin-top: 40px;
+}
+
+body {
+  background-color: #333333;
+  color: white;
+  height: 100vh;
+  margin: 0;
+  overflow: hidden;
+}
+
+.highlighted-table {
+  height: 80vh;
+  overflow-y: auto;
+  border: 2px solid #ffffff;
+  padding: 10px;
+  margin: 20px auto;
+  width: 90%;
+  background-color: #444444;
+  border-radius: 10px;
+}
+
+.highlighted-table table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.highlighted-table th, .highlighted-table td {
+  border: 1px solid #555555;
+  padding: 8px;
+  text-align: left;
+}
+
+.highlighted-table th {
+  background-color: #555555;
+}
+
+.highlighted-table td a {
+  color: #1e90ff;
+}
+
+.highlighted-table button {
+  background-color: #ff4d4d;
+  border: none;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.highlighted-table button:hover {
+  background-color: #ff1a1a;
+}
+
+/* Custom scrollbar styles */
+.highlighted-table::-webkit-scrollbar {
+  width: 12px;
+}
+
+.highlighted-table::-webkit-scrollbar-thumb {
+  background-color: #888;
+  border-radius: 6px;
+}
+
+.highlighted-table::-webkit-scrollbar-thumb:hover {
+  background-color: #555;
+}
+
+.highlighted-table::-webkit-scrollbar-track {
+  background-color: #333;
+  border-radius: 6px;
+}
+
+
+
+@media (max-width:520px) {
+    .banner{
+      width: 250px;
+      height: 70px;
+    }
+    .banner2{
+      width: 250px;
+      height: 70px;
+    }
+    
+
+}

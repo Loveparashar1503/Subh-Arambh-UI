@@ -1,0 +1,75 @@
+<div class="login-time">
+    
+
+</div>
+<p>Click on each Setting to view 🙂</p>
+
+<br>
+<br>
+<div>
+    
+</div>
+
+<mat-accordion>
+    <mat-expansion-panel hideToggle>
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          Click to Open status of Login Time
+        </mat-panel-title>
+        <mat-panel-description>
+          Time for current open session on this site
+        </mat-panel-description>
+      </mat-expansion-panel-header>
+      <mat-progress-bar mode="determinate" [value]="progressBarValue" ></mat-progress-bar>
+    </mat-expansion-panel>
+    <br>
+    <mat-expansion-panel (opened)="panelOpenState = true"
+                         (closed)="panelOpenState = false">
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+           Wishing to Delete this Account
+        </mat-panel-title>
+        <mat-panel-description>
+          Click to open the steps
+        </mat-panel-description>
+      </mat-expansion-panel-header>
+      <mat-stepper [linear]="isLinear" #stepper>
+        <mat-step [stepControl]="firstFormGroup">
+          <form [formGroup]="firstFormGroup">
+            <ng-template matStepLabel>Fill out your name</ng-template>
+            <mat-form-field>
+              <mat-label>Name</mat-label>
+              <input matInput placeholder="Last name, First name" formControlName="firstCtrl" required>
+            </mat-form-field>
+            <div>
+              <button mat-button matStepperNext>Next</button>
+            </div>
+          </form>
+        </mat-step>
+        <mat-step [stepControl]="secondFormGroup" label="Please Tell Reason to Delete Account">
+          <form [formGroup]="secondFormGroup">
+            <mat-form-field>
+              <mat-label>Reason to Delete</mat-label>
+              <input matInput formControlName="secondCtrl" placeholder="Done questions"
+                     required>
+            </mat-form-field>
+            <div>
+              <button mat-button matStepperPrevious>Back</button>
+              <button mat-button matStepperNext>Next</button>
+            </div>
+          </form>
+        </mat-step>
+        <mat-step>
+          <ng-template matStepLabel>Done</ng-template>
+          <p>You are now done, Click on Delete ID Button or Go back</p>
+          <div>
+            <button mat-raised-button matStepperPrevious>Back</button>
+            <button mat-raised-button (click)="deleteUser()" color="warn">delete ID</button>
+          </div>
+        </mat-step>
+      </mat-stepper>
+    </mat-expansion-panel>
+  </mat-accordion>
+  
+
+

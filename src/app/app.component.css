@@ -1,0 +1,43 @@
+.example-spacer {
+    flex: 1 1 auto;
+  }
+  .my-form{
+    min-width: 150px;
+    max-width: 500px;
+    width: 100%;
+  }
+  .full-width {
+    width: 100%;
+  }
+  /* Add your other styles here */
+
+@media (max-width:300px) {
+ .b1{
+  font-size: 0.7rem;
+ }   
+}
+
+/* Hide mat-icon-button when the screen width is 520px or less */
+@media (max-width: 769px) {
+   .contentforlearn{
+       display: none;
+   }
+   
+
+}
+@media (max-width:520px) {
+  mat-form-field{
+    display:none;
+}
+ 
+}
+
+/* 
+body{
+  background-color: lightblue;
+  z-index: -1;
+} */
+/* ------------------------------------ Click on login and Sign Up to  changue and view the effect
+---------------------------------------
+*/
+

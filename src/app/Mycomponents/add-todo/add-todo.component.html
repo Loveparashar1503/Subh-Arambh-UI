@@ -1,0 +1,59 @@
+<body [ngStyle]="{'background-color': '#333333', 'position': 'relative', 'overflow': 'hidden'}">
+  <div class="banner">
+      <mat-card class="banner-card">
+          <mat-card-title>My DSA Sheet of Top 100 questions 😇</mat-card-title>
+      </mat-card>
+  </div>
+
+  <div class="filter-buttons">
+      <p class="filterby">Filter By:</p>
+      <button class="filter-btn red-btn" type="submit" (click)="SortRatings()">Top Rated</button>
+      <button class="filter-btn green-btn" type="submit" (click)="LowRatings()">Low Rated</button>
+      <button class="filter-btn red-btn" type="submit" (click)="scorecard()">Scorecard</button>
+      <button class="filter-btn green-btn" type="submit" (click)="completed()">Completed</button>
+      <button class="filter-btn blue-btn" type="submit" (click)="Incompleted()">Incompleted</button>
+  </div>
+
+  <div class="container">
+      <div class="cardscontainer">
+          <div class="card" *ngFor="let question of questionarr">
+              <div class="card-body">
+                  <div class="card-header">
+                      <img *ngIf="question.url.charAt(8)=='l'" src="../../../assets/leetcode.png" width="50px" height="30px" alt="Leetcode">
+                      <img *ngIf="question.url.charAt(12)=='g' || question.url.charAt(8)=='p'" src="../../../assets/gfg.jpg" width="50px" height="30px" alt="Gfg">
+                      <img *ngIf="question.url.charAt(12)=='s'" src="../../../assets/spoj.jpg" width="50px" height="30px" alt="Spoj">
+                      <h5 class="card-title" *ngIf="question.url.charAt(8)=='l'">Leetcode problem</h5>
+                      <h5 class="card-title" *ngIf="question.url.charAt(12)=='g' || question.url.charAt(8)=='p'">Gfg problem</h5>
+                      <h5 class="card-title" *ngIf="question.url.charAt(12)=='s'">SPOJ problem</h5>
+                  </div>
+                  <p class="card-text">{{question.name}}</p>
+                  <div class="card-actions">
+                      <a href={{question.url}} class="btn btn-primary" target="_blank">Go to question</a>
+                      <div class="icons">
+                          <button mat-icon-button (click)="thumbup(question.id)">
+                              <mat-icon [ngClass]="{'liked': question.liked}" aria-label="Like">
+                                  favorite
+                              </mat-icon>
+                          </button>
+                          <span class="like-text">{{question.liked ? 'Liked!' : 'Like'}}</span>
+                          <div class="vote-controls">
+                              <mat-icon (click)="upvoted(question.id)" class="vote-icon">arrow_drop_up</mat-icon>
+                              <span>{{question.numupvotes - question.numDownvotes}}</span>
+                              <mat-icon (click)="downvoted(question.id)" class="vote-icon">arrow_drop_down</mat-icon>
+                          </div>
+                      </div>
+                      <button mat-raised-button *ngIf="!question.completed" color="basic" (click)="markCompleted(question.id, $event)">Mark as Completed</button>
+                      <button mat-raised-button *ngIf="question.completed" color="basic" (click)="markCompleted(question.id, $event)">Completed 😇 <span><a routerLink="../score">See Scorecard</a></span></button>
+
+                      <!-- <button mat-raised-button *ngIf="!question.completed" color="basic" (click)="markCompleted(question.id,$event)">Mark as Completed</button>
+                      <button mat-raised-button *ngIf="question.completed" color="basic" (click)="markCompleted(question.id,$event)">Completed 😇 <span><a routerLink="../score">See Scorecard</a></span></button> -->
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+
+  <div *ngFor="let message of messages" class="flash-message" [ngClass]="v==1 ? 'redback':'greenback'">
+      {{ message }}
+  </div>
+</body>

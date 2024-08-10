@@ -1,0 +1,89 @@
+<body >
+    <ngx-ui-loader text="Please Wait... "></ngx-ui-loader>
+<div ngxUiLoaderBlurred (blur)="10">
+<!-- <mat-toolbar style="background: #778899;" class="mat-elevation-z8" > -->
+<mat-toolbar style="background: black;border-bottom: 1px solid whitesmoke;" class="mat-elevation-z8" >
+  <button (click)="toggleDrawer()" mat-icon-button *ngIf="checkLoggedIn()">
+      <mat-icon style="color: white;">menu</mat-icon>
+  </button>
+  <span class="contentforlearn" style="color: white;" *ngIf="checkLoggedIn()"><img src="../assets/sa-logo.jpg" alt="" height="50px" width="50px"></span>
+  <span class="contentforlearn" style="color: white;" *ngIf="!checkLoggedIn()"><img src="../assets/sa-logo.jpg" alt="" height="50px" width="50px" style="margin-right: 15px;">Welcome to Your WorkStation</span>
+  <span class="example-spacer"></span>
+  
+  <mat-form-field *ngIf="checkforfield()" style="" class="example-full-width">
+    <mat-label>Search Questions</mat-label>
+    <input matInput  (input)="Search()" [(ngModel)]="searchfield" value="">
+  </mat-form-field>
+  
+  <button mat-button class="b1" routerLink="main" style="color: white;">Home</button>
+
+  <button mat-button class="b1" type="submit" *ngIf="checkLoggedIn()" (click)="logout()" style="color: white;">Logout</button>
+  <button mat-button class="b1" type="submit" *ngIf="loginorsignup()" (click)="Login()" style="color: white;">Login</button>
+  <button mat-button class="b1" type="submit" *ngIf="checkSignUp()" (click)="SignUp()" style="color: white;">Sign Up</button>
+  
+  <button routerLink="" mat-button><a [ngStyle]="{color:'white'}" href="https://www.youtube.com/channel/UCMsaisyJIvmBHvH2LQDZ9yg" class="b1" target="_blank">Mychannel</a></button>
+  <a href="https://www.linkedin.com/in/love-parashar-a69965219/" class="b1" mat-raised-button color="accent" target="_blank">Join Me</a>
+  
+    <button mat-button *ngIf="checkLoggedIn()" (click)="openDialog()"><mat-icon style="color: white;">feedback</mat-icon></button>
+
+      <!-- <mat-icon matBadgeColor="accent" matBadge="15" [matBadgeHidden]="badgevisible" matBadgeSize="small">notifications</mat-icon> -->
+  
+</mat-toolbar>
+<mat-drawer-container autosize style="background-color: black">
+  <mat-drawer style="background-color: black;border-right: 1px solid whitesmoke;" [ngStyle]="{'position':'fixed','top':'70px'}" #drawer [mode]="drawerMode" [opened]="showDrawer" position="start" *ngIf="checkLoggedIn()">
+  <mat-nav-list style="padding: 0;">
+      <mat-list-item style="background-color: black;">
+          <button  routerLink="score" style="color: white;" mat-button><mat-icon>dashboard</mat-icon> Scorecard</button>
+      </mat-list-item>
+      
+      <mat-list-item routerLink="oopsnotes" style="background-color: black;">
+          <button style="color: white;" routerLink="oopsnotes" mat-button><mat-icon>book</mat-icon> OOPS Notes</button>
+      </mat-list-item>
+      <mat-list-item routerLink="resumemade" style="background-color: black;">
+        <button style="color: white;" routerLink="resumemade" mat-button><mat-icon>book</mat-icon> Resume made</button>
+    </mat-list-item>
+      <mat-list-item routerLink="LikedQuestions" style="background-color: black;">
+          <button style="color: white;" routerLink="LikedQuestions" mat-button><mat-icon>business</mat-icon> Liked Questions</button>
+      </mat-list-item>
+      <mat-list-item routerLink="article" style="background-color: black;">
+        <button style="color: white;" routerLink="article" mat-button><mat-icon>business</mat-icon> Post section</button>
+    </mat-list-item>
+      <mat-list-item style="background-color: black;">
+        <button style="color: white;" mat-button routerLink="companyanalysis" ><mat-icon>analytics</mat-icon>Company Analysis</button>
+    </mat-list-item>
+
+    <mat-list-item style="background-color: black;">
+       <button style="color: white;" mat-button routerLink="resume" ><mat-icon>analytics</mat-icon>Resume builder</button>
+    </mat-list-item>
+    <mat-list-item style="background-color: black;">
+        <button style="color: white;" mat-button routerLink="playlist"><mat-icon>dns</mat-icon> Important Playlist</button>
+    </mat-list-item>
+      <mat-list-item style="background-color: black;border-right: 1px solid whitesmoke;">
+          <button style="color: white;" mat-button routerLink="settings"><mat-icon>settings</mat-icon> Settings</button>
+      </mat-list-item>
+     
+     
+  </mat-nav-list>
+  </mat-drawer>
+  
+
+  <div>
+      <div style="text-align: center; min-height: 500px;">
+           
+             <router-outlet></router-outlet>
+             
+          </div>
+        </div>
+</mat-drawer-container>
+</div>
+</body>
+<!-- <div *ngIf="retval!=0">
+    <app-registration></app-registration>
+</div>
+<div *ngIf="retval==0">
+    <app-login></app-login>
+</div> -->
+
+<!-- <app-registration></app-registration> -->
+<!-- <router-outlet></router-outlet> -->
+

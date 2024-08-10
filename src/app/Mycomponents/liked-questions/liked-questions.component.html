@@ -1,0 +1,26 @@
+<body style="background-color: #333333; color: white; height: 100vh; margin: 0; overflow: hidden;">
+  <div class="banner" style="margin-top: 10px;" *ngIf="checkToDisplay()">
+  </div>
+  <div class="banner2" style="margin-top: 10px;" *ngIf="!checkToDisplay()">
+  </div>
+  <div class="highlighted-table">
+    <table *ngIf="questionList.length > 0">
+      <thead>
+        <tr>
+          <th>S.No.</th>
+          <th>Problem Name</th>
+          <th>URL</th>
+          <th>Remove?</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let question of questionList; let i = index">
+          <td>{{ i + 1 }}</td>
+          <td>{{ question.name }}</td>
+          <td><a [href]="question.url" target="_blank">Click</a></td>
+          <td><button (click)="thumbup(question.id)">Remove</button></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</body>

@@ -1,0 +1,81 @@
+.main-div{
+    display: flex;
+    flex-direction: row;
+    /* background: url('../../../assets/background.jpg') center/cover no-repeat; */
+    
+        
+      
+    height: 100vh;
+    
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.example-card {
+    max-width: 400px;
+   
+  }
+
+.middle{
+    height: 500px;
+    width: 1px;
+    border: 1px solid black;
+    /* margin: auto; */
+}
+mat-card{
+    margin-top: 20px;
+    max-height: 500px;
+}
+
+body{
+    background-image: url('../../../assets/background.jpg');
+}
+.firstdiv{
+   
+    width: 55%;
+    height: 400px;
+    
+}
+
+.example-card{
+    width: 35%;
+    text-align: center;
+    box-shadow: 10px 10px 2px 2px lightgrey;
+}
+.matcard{
+    width: 100%;
+    margin-left: 50%;
+    margin-right: auto;
+    margin: auto;
+    border-bottom: 1px solid black;
+    
+}
+@media (max-width:1030px) {
+    .main-div{
+        height: 200vh;
+    }
+    mat-card{
+        margin-top: 20px;
+        max-height: 600px;
+    }
+    .example-card{
+        width: 70%;
+    }
+}
+
+@media (max-width:825px) {
+    /* .example-card{
+        margin-top: -100px;
+    } */
+    .main-div{
+        height: 200vh;
+    }
+    .firstdiv{
+        height: 400px;
+        width: 80%;
+        margin-bottom: -500px;
+    }
+    .example-card{
+        width: 90%;
+        
+    }
+}

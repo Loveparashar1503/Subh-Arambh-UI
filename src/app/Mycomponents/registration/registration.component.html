@@ -1,0 +1,47 @@
+<div class="divs">
+   <video autoplay loop>
+      <source src="../../../assets/welcome.mp4" type="video/mp4" />
+  </video>
+ <mat-card class="my-card" [ngStyle]="">
+   
+<!-- </div> -->
+  
+<mat-card-content [ngStyle]="" style="">
+   <div class="container">
+      <h1>Sign Up</h1>
+   </div>
+    <form class="my-form" > 
+       <mat-form-field class="full-width">
+              <mat-label>First Name</mat-label>
+              <input  matInput  placeholder="First name"  name="fname" [(ngModel)]="user.fname" required>
+           </mat-form-field>
+           <mat-form-field class="full-width">
+              <mat-label>Last Name</mat-label>
+              <input  matInput  placeholder="Last Name" name="lname"  [(ngModel)]="user.sname" value=""   required>
+           </mat-form-field>
+           <mat-form-field class="full-width">
+              <mat-label>Email</mat-label>
+              <input  matInput  placeholder="Email" name="email"  [(ngModel)]="user.email" value=""  required [email]="true">
+           </mat-form-field>
+           <mat-form-field class="full-width">
+              <mat-label>Password</mat-label>
+              <input  matInput  placeholder="Password" value=""   [(ngModel)]="user.password" name="password" required>
+           </mat-form-field>
+           <mat-form-field class="full-width">
+            <mat-label>Linkedin Profile</mat-label>
+            <input  matInput  placeholder="linkedin profile" value=""  [(ngModel)]="user.linkedinprofile"   name="linkedin">
+         </mat-form-field>
+    </form>
+  </mat-card-content>
+  <mat-card-actions [ngStyle]="{margin:'auto',marginTop:'-20px'}">
+    <!-- REGISTER BUTTON --><button #button (click)="submitForm()" mat-raised-button color="primary">REGISTER</button>
+  </mat-card-actions>
+  </mat-card>
+  <mat-card class="my-card2" style="background-color: transparent;">
+        <h2 class="h2" style="color: white;">Join the Biggest Community of Coders 😇</h2>
+        <div class="second" style="margin: auto;"></div>
+  </mat-card>
+  <div *ngFor="let message of messages" class="flash-message" [ngClass]="v==1 ? 'redback':'greenback'">
+   {{ message }}
+ </div>
+ </div>

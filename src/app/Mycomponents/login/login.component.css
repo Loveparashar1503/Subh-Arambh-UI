@@ -1,0 +1,214 @@
+.my-form{
+    min-width: 150px;
+    max-width: 500px;
+    width: 100%;
+  }
+  .full-width {
+    width: 100%;
+  }
+  .divs{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    background-color: lightblue;
+    position: relative;
+    height: 90.5vh;
+}
+.divs video{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  object-fit: cover;
+  z-index: 0;
+}
+
+
+  
+mat-card{
+  background: rgb(152, 95, 104);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+h1{
+   font-size: 3rem;
+   color: #0e3742;
+   text-transform: uppercase;
+   width: 100%;
+   -webkit-box-reflect: below 1px linear-gradient(transparent,#0004);
+   margin-bottom: 70px;
+   text-align: center;
+   outline:none;
+   animation:animate 5s linear infinite;
+
+}
+
+@keyframes animate{
+  0%,18%,20%,50.1%,60%,65.1%,80%,90.1%,92%{
+    color: #0e3742;
+    box-shadow: none;
+  }
+  18.1%,20.1%,30%,50%,60.1%,65%,80.1%,90%,92.1%,100%{
+    color: #fff;
+    box-shadow: 0 0 10px #03bcf4,
+    0 0 20px #03bcf4,
+    0 0 40px #03bcf4,
+    0 0 80px #03bcf4,
+    0 0 160px #03bcf4
+    ;
+  }
+}
+
+.my-card2{
+  margin: auto;
+  background: transparent;
+  border: 0;
+  width: 400px;
+  height: 128px;
+  /* box-shadow:  16px 14px 14px #0000008c;; */
+}
+.second{
+  width: 400px;
+  height: 127px;
+  /* margin: auto; */
+  /* display: inline-block; */
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url("../../../assets/sa-brand-logo.jpg");
+  border: 0;
+  
+}
+
+
+
+.flash-message {
+  position: absolute;
+  top: 10px;
+  /* right: 200px; */
+  padding: 20px;
+  /* background-color: #4CAF50; Green background */
+  color: white; /* White text */
+  margin-bottom: 15px;
+  animation: fadeOut 10s forwards; /* Auto-close after 5 seconds */
+}
+.redback{
+  background-color: red;
+  left:120px;
+}
+.greenback{
+  background-color: lightgreen;
+  right:100px;
+
+}
+@keyframes fadeOut {
+  to {
+    opacity: 0;
+  }
+}
+
+.my-card{
+  margin: 100px;
+  background-color: transparent;
+  overflow: hidden;
+}
+
+
+
+@media (max-width:280px) {
+  .my-card{
+    width: 250px;
+    height: 250px;
+    margin:auto;
+    /* margin-left:-400px; */
+   }
+   .my-card2{
+    margin-top: -100px;
+    margin-left: auto;
+    margin-right: auto;
+   }
+   input{
+    width.%: 200px;
+    height.%: 200px;
+    font-size: 7px;
+ }
+}
+
+@media (max-width:540px) {
+  
+  .my-card{
+   width: 400px;
+   height: 400px;
+   margin:auto;
+   /* margin-left:-400px; */
+  }
+  .my-card2{
+   margin-top: -100px;
+   margin-left: auto;
+   margin-right: auto;
+  }
+  input{
+   width.%: 300px;
+   height.%: 30px;
+   font-size: 10px;
+}
+.second{
+  width: 300px;
+  height: 250px;
+}
+  *{
+   overflow: hidden;
+  }
+}
+
+@media (max-width:1000px) {
+    .divs{
+        height: 200vh;
+        
+    }
+    .my-card{
+      /* margin-left: auto; */
+      margin-right: auto;
+    }
+}
+@media (max-width:780px) {
+  .divs{
+    height: 160vh;
+  }
+  .my-card{
+      background-color: 'blue';
+  }
+}
+
+@media (min-width:768px) and (max-width:991px) {
+  h1{
+    font-size: 3rem;
+    color: #0e3742;
+    text-transform: uppercase;
+    width: 100%;
+    -webkit-box-reflect: below 1px linear-gradient(transparent,#0004);
+    margin-bottom: 70px;
+    text-align: center;
+    outline:none;
+    animation:animate 5s linear infinite;
+    
+ }
+ 
+ @keyframes animate{
+   0%,18%,20%,50.1%,60%,65.1%,80%,90.1%,92%{
+     color: #0e3742;
+     box-shadow: none;
+   }
+   18.1%,20.1%,30%,50%,60.1%,65%,80.1%,90%,92.1%,100%{
+     color: #ffffff32;
+     box-shadow: 0 0 10px #03bcf4,
+     0 0 20px #03bcf4,
+     0 0 40px #03bcf4,
+     0 0 80px #03bcf4,
+     0 0 160px #03bcf4
+     ;
+   }
+ }
+}
+
+

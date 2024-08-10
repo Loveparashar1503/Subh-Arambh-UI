@@ -1,0 +1,31 @@
+.example-card {
+    max-width: 400px;
+  }
+  
+  .example-header-image {
+    background-image: url('https://www.logolynx.com/images/logolynx/37/37fbd962d88b5c50ebf1737a4a40a57e.jpeg');
+    background-size: cover;
+  }
+  mat-card{
+    
+    margin: 10px;
+  }
+  
+  .main-div{
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+
+
+@media (max-width:820px) {
+  mat-card{
+    width: 380px;
+  }
+}
+
+@media (max-width:768px) {
+  mat-card{
+    width: 350px;
+  }
+}

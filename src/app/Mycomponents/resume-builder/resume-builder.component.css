@@ -1,0 +1,232 @@
+.resume-editor {
+    display: flex;
+  }
+  
+  .form-column {
+    width: 50%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .preview-column {
+    width: 50%;
+    padding: 10px;
+    border-left: 1px solid #ccc;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+  }
+  
+  .preview {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .full-width-btn {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .full-width-btn:hover {
+    background-color: #0056b3;
+  }
+  
+  .section-block {
+    background-color: #fff;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-bottom: 20px;
+  }
+  
+  .close-btn {
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+  }
+  
+  .close-btn:hover {
+    background-color: #c82333;
+  }
+  
+  button {
+    margin: 10px 0;
+  }
+  
+  label {
+    display: block;
+    margin-top: 10px;
+  }
+  
+  input, textarea {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    box-sizing: border-box;
+  }
+  
+  ul {
+    list-style: decimal;
+    padding-left: 20px;
+  }
+  
+  ul li {
+    margin-bottom: 5px;
+  }
+  
+  h1, h2, h3 {
+    color: #333;
+  }
+  
+  .preview p, .preview ul, .preview li {
+    margin: 5px 0;
+  }
+  
+  .header h1 {
+    margin-bottom: 5px;
+  }
+  
+  .header h2 {
+    margin-bottom: 10px;
+  }
+  
+  .header p {
+    margin-bottom: 2px;
+  }
+  
+  .section {
+    margin-bottom: 20px;
+  }
+  
+  .section h3 {
+    border-bottom: 2px solid #007bff;
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+  }
+  .meta-data {
+    display: flex;
+    justify-content: center; /* Centers the items horizontally */
+    align-items: center; /* Centers the items vertically */
+    gap: 10px; /* Adjusts space between items */
+    flex-wrap: wrap; /* Wraps items if the parent container is too small */
+    width: 100%; /* Ensures the container takes up full width */
+}
+
+.meta-data div, .meta-data p {
+    display: flex;
+    align-items: center;
+}
+
+.meta-data div:not(:last-child)::after, .meta-data p:not(:last-child)::after {
+    content: "|"; /* Adds the pipe separator */
+    margin-left: 5px; /* Adds space before the separator */
+    margin-right: 0px; /* Adds space after the separator */
+}
+
+.meta-data h2, .meta-data p {
+    margin: 0; /* Removes default margins */
+}
+
+.section {
+  padding: 20px;
+  /* background-color: white; */
+  margin: 20px auto;
+  max-width: 800px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+  font-size: 24px;
+  margin-bottom: 15px;
+  color: #333;
+  border-bottom: 2px solid #333;
+  padding-bottom: 5px;
+}
+
+.experience {
+  margin-top: 20px;
+}
+
+.job {
+  margin-bottom: 20px;
+}
+
+.job-title {
+  display: flex;
+  justify-content: space-between;
+  font-size: 18px;
+  font-weight: bold;
+  color: #555;
+}
+
+.job-details {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+  font-style: italic;
+  color: #777;
+  margin-top: 5px;
+}
+
+.job-tasks {
+  margin-top: 10px;
+  padding-left: 20px;
+  list-style-type: disc;
+}
+
+.job-tasks li {
+  margin-bottom: 5px;
+  font-size: 14px;
+  color: #333;
+}
+
+strong {
+  color: #333;
+}
+
+h2 {
+  font-size: 24px;
+  margin-bottom: 15px;
+  color: #333;
+  border-bottom: 2px solid #333;
+  padding-bottom: 5px;
+}
+
+.skills-list {
+  list-style-type: none; /* Remove default bullets */
+  padding: 0;
+  margin: 0;
+}
+
+.skills-list li {
+  display: flex; /* Use Flexbox to align items */
+  align-items: flex-start; /* Align items at the start */
+  margin-bottom: 10px;
+  font-size: 14px;
+  color: #333;
+}
+
+.skills-list .label {
+  width: 150px; /* Fixed width for labels */
+  font-weight: bold;
+  margin-right: 10px; /* Space between label and content */
+}
+
+.skills-list .content {
+  flex-grow: 1; /* Allow the content to take up remaining space */
+}
+
+
+
+

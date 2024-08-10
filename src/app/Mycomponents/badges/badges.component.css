@@ -1,0 +1,16 @@
+.example-card {
+    max-width: 100px;
+  }
+
+  *{
+    background-color: "#1E1E1E";
+  }
+  
+  .example-header-image {
+    background-image: url('https://res.cloudinary.com/bloomnation/c_pad,d_vendor:global:catalog:product:image.png,f_auto,fl_preserve_transparency,q_auto/v1514445189/vendor/2140/catalog/product/2/0/20170829084932_file_59a5d35c588cb.png');
+    background-size: cover;
+  }
+  mat-card{
+    
+    margin: 10px;
+  }

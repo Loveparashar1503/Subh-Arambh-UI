@@ -1,0 +1,18 @@
+<a routerLink="../login">click to go back</a>
+<div style="margin-top: 40px;">
+<h1>Reset your Password using your Email ID</h1>
+<form> 
+    <p>Type your Registered Email to validate</p>
+    <mat-form-field class="full-width">
+       
+       <mat-label>Email</mat-label>
+       <input [ngStyle]="{'margin':'auto'}" matInput #username  placeholder="Email" name="username" [(ngModel)]="email"   value=""  required>
+    </mat-form-field>
+    <button type="submit" (click)="submit()">Submit</button>
+    <br>
+    <p>{{mssg}}</p>
+     <!-- <a routerLink="../forgot-password" style="color:white;margin: auto;">Forgot Password</a> -->
+     
+</form>
+</div>
+

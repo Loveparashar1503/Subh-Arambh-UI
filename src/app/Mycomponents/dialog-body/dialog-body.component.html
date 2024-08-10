@@ -1,0 +1,33 @@
+<button mat-icon-button style="float:right;margin: 5px;" matDialogClose>
+    <mat-icon>close</mat-icon>
+</button>
+<mat-dialog-content>
+     <header>
+        <h1>ABOUT THIS QUESTION</h1>
+        <p>Please tell us more about company information in which this question was asked from you!</p>
+     </header>
+     <p>
+        <mat-form-field  [ngStyle]="{width:'400px'}">
+            <input matInput placeholder="Name of Company" [(ngModel)]="dialogbox.companyName">
+            <mat-icon matSuffix>person</mat-icon>
+        </mat-form-field>
+     </p>
+     <p>
+        <mat-form-field [ngStyle]="{width:'400px'}">
+            <input matInput placeholder="Linkedin Profile" [(ngModel)]="dialogbox.linkedinProfile">
+            <mat-icon matSuffix>account_circle</mat-icon>
+        </mat-form-field>
+        
+     </p>
+     <p>
+        <mat-form-field [ngStyle]="{width:'400px'}">
+            <input matInput placeholder="Description About Interview Round" [(ngModel)]="dialogbox.DescriptionInterview">
+            <mat-icon matSuffix>save</mat-icon>
+        </mat-form-field>
+        
+     </p>
+</mat-dialog-content>
+<mat-dialog-actions align="end">
+    <button mat-raised-button color="primary" (click)="saveChanges()">Save</button>
+    <button mat-raised-button color="warn" matDialogClose>Cancel</button>
+</mat-dialog-actions>
